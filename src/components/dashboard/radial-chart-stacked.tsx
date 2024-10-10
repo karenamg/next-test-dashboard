@@ -50,12 +50,16 @@ export function RadialChartStacked({
   pendientes,
 }: Props) {
   const totalCitas = aprobadas + canceladas + pendientes;
-  const aprobadasPercent = ((aprobadas / totalCitas) * 100).toFixed(0) + "%";
-  const canceladasPercent = ((canceladas / totalCitas) * 100).toFixed(0) + "%";
-  const pendientesPercent = ((pendientes / totalCitas) * 100).toFixed(0) + "%";
+  let aprobadasPercent = ((aprobadas / totalCitas) * 100).toFixed(0) + "%";
+  let canceladasPercent = ((canceladas / totalCitas) * 100).toFixed(0) + "%";
+  let pendientesPercent = ((pendientes / totalCitas) * 100).toFixed(0) + "%";
   const chartData = [
     { aprobadas: aprobadas, canceladas: canceladas, pendientes: pendientes },
   ];
+
+  if (!aprobadas) aprobadasPercent = "0%";
+  if (!canceladas) canceladasPercent = "0%";
+  if (!pendientes) pendientesPercent = "0%";
   return (
     <Card className="flex flex-col">
       <CardHeader className="items-center pb-0">

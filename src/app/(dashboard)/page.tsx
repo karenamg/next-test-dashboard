@@ -151,11 +151,12 @@ async function getPacientesAtendidos(): Promise<{
     }
   });
 
-  const oldestMonth =
+  let oldestMonth =
     oldestDate.toLocaleString("default", { month: "long" }) +
     " - " +
     currentMonth;
 
+  if (!count) oldestMonth = "";
   return { pacientesAtendidos: count, meses: oldestMonth };
 }
 
