@@ -23,12 +23,12 @@ export const DoctorActions = ({ doctorId, doctor }: Props) => {
 
   const handleVerificarDoctor = async () => {
     await verificarDoctor(doctorId, doctor);
-    router.refresh(); // Para obtener los datos nuevamente se puede mejorar utilizando react-query
+    router.refresh();
   };
 
   const handleDenegarDoctor = async () => {
     await denegarDoctor(doctorId, doctor);
-    router.refresh(); // Para obtener los datos nuevamente se puede mejorar utilizando react-query
+    router.refresh();
   };
 
   return (

@@ -16,6 +16,10 @@ const badgeVariants = cva(
           "border-transparent bg-emerald-500 hover:bg-emerald-500/80 text-white",
         pendiente:
           "border-transparent bg-yellow-600 hover:bg-yellow-600/80 text-white",
+        cancelada:
+          "border-transparent bg-rose-500 hover:bg-rose-500/80 text-white",
+        aprobada:
+          "border-transparent bg-emerald-500 hover:bg-emerald-500/80 text-white",
       },
     },
     defaultVariants: {

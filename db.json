@@ -143,61 +143,61 @@
   ],
   "pacientes": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Ana Garcia",
       "fecha_nacimiento": "1990-05-15",
       "sexo": "Femenino"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Pedro Martinez",
       "fecha_nacimiento": "1985-10-20",
       "sexo": "Masculino"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Sofia Lopez",
       "fecha_nacimiento": "1978-03-12",
       "sexo": "Femenino"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Carlos Vargas",
       "fecha_nacimiento": "1999-07-08",
       "sexo": "Masculino"
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Luisa Ramirez",
       "fecha_nacimiento": "1983-09-25",
       "sexo": "Femenino"
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Juan Torres",
       "fecha_nacimiento": "1975-12-30",
       "sexo": "Masculino"
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "María Sanchez",
       "fecha_nacimiento": "1992-02-18",
       "sexo": "Femenino"
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Miguel González",
       "fecha_nacimiento": "1988-04-05",
       "sexo": "Masculino"
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Laura Torres",
       "fecha_nacimiento": "1991-06-22",
       "sexo": "Femenino"
     },
     {
-      "id": 10,
+      "id": "10",
       "nombre": "Gabriel Pérez",
       "fecha_nacimiento": "1980-08-10",
       "sexo": "Masculino"
@@ -205,7 +205,7 @@
   ],
   "citas": [
     {
-      "id": 1,
+      "id": "1",
       "fecha": "2024-10-10",
       "hora": "10:00",
       "doctor_id": "1",
@@ -213,7 +213,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 2,
+      "id": "2",
       "fecha": "2024-10-12",
       "hora": "15:30",
       "doctor_id": "2",
@@ -221,7 +221,7 @@
       "estatus": "pendiente"
     },
     {
-      "id": 3,
+      "id": "3",
       "fecha": "2024-10-15",
       "hora": "11:00",
       "doctor_id": "3",
@@ -229,7 +229,7 @@
       "estatus": "cancelada"
     },
     {
-      "id": 4,
+      "id": "4",
       "fecha": "2024-10-17",
       "hora": "09:30",
       "doctor_id": "4",
@@ -237,7 +237,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 5,
+      "id": "5",
       "fecha": "2024-10-20",
       "hora": "14:00",
       "doctor_id": "5",
@@ -245,7 +245,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 6,
+      "id": "6",
       "fecha": "2024-10-22",
       "hora": "08:45",
       "doctor_id": "6",
@@ -253,7 +253,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 7,
+      "id": "7",
       "fecha": "2024-9-25",
       "hora": "12:30",
       "doctor_id": "7",
@@ -261,7 +261,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 8,
+      "id": "8",
       "fecha": "2024-8-28",
       "hora": "16:15",
       "doctor_id": "8",
@@ -269,7 +269,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 9,
+      "id": "9",
       "fecha": "2024-9-30",
       "hora": "10:45",
       "doctor_id": "1",
@@ -277,7 +277,7 @@
       "estatus": "cancelada"
     },
     {
-      "id": 10,
+      "id": "10",
       "fecha": "2024-7-02",
       "hora": "13:20",
       "doctor_id": "2",
@@ -285,7 +285,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 11,
+      "id": "11",
       "fecha": "2024-11-05",
       "hora": "09:00",
       "doctor_id": "3",
@@ -293,7 +293,7 @@
       "estatus": "pendiente"
     },
     {
-      "id": 12,
+      "id": "12",
       "fecha": "2024-11-08",
       "hora": "14:30",
       "doctor_id": "20",
@@ -301,7 +301,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 13,
+      "id": "13",
       "fecha": "2024-11-10",
       "hora": "11:45",
       "doctor_id": "5",
@@ -309,7 +309,7 @@
       "estatus": "pendiente"
     },
     {
-      "id": 14,
+      "id": "14",
       "fecha": "2024-11-13",
       "hora": "08:30",
       "doctor_id": "6",
@@ -317,7 +317,7 @@
       "estatus": "aprobada"
     },
     {
-      "id": 15,
+      "id": "15",
       "fecha": "2024-11-15",
       "hora": "17:00",
       "doctor_id": "7",

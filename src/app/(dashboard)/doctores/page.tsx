@@ -1,12 +1,7 @@
-import DoctorListItem from "@/components/doctores/doctor-lis-item";
-import {
-  EstatusDoctor,
-  Doctor,
-  Especialidad,
-  DoctorResponse,
-  Ubicacion,
-} from "@/types";
+import { Doctor, Especialidad, DoctorResponse, Ubicacion } from "@/types";
 import axios from "axios";
+import { DataTable } from "./data-table";
+import { columns } from "./columns";
 
 async function getDoctores(): Promise<Doctor[]> {
   try {
@@ -49,11 +44,7 @@ export default async function DoctoresPage() {
   return (
     <div>
       <h1 className="text-2xl font-bold">Doctores</h1>
-      <div>
-        {doctores.map((doctor) => (
-          <DoctorListItem key={doctor.id} doctor={doctor} />
-        ))}
-      </div>
+      <DataTable data={doctores} columns={columns} />
     </div>
   );
 }
