@@ -44,7 +44,7 @@ export default async function CitasPage() {
   const citas = await getCitas();
 
   return (
-    <div>
+    <div className="p-3">
       <h1 className="text-2xl font-bold">Citas</h1>
       <DataTable data={citas} columns={columns} />
     </div>

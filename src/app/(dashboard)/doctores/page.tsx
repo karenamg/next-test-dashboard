@@ -42,7 +42,7 @@ export default async function DoctoresPage() {
   const doctores = await getDoctores();
 
   return (
-    <div>
+    <div className="p-3">
       <h1 className="text-2xl font-bold">Doctores</h1>
       <DataTable data={doctores} columns={columns} />
     </div>

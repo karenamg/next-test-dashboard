@@ -72,8 +72,8 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-      <div className="flex items-center justify-between py-4">
-        <DateRange date={date} onDateChange={setDate} />
+      <div className="flex items-center justify-between py-4 gap-x-4">
+        <DateRange date={date} onDateChange={setDate} className="w-10" />
         <Button
           size="sm"
           className="h-8 gap-1"
