@@ -131,7 +131,7 @@ export function RadialChartStacked({
         <div className="flex items-center gap-2 font-medium leading-none">
           Total de citas registradas
         </div>
-        <div className="leading-5 text-muted-foreground">
+        <div className="leading-5 text-muted-foreground text-center">
           {`Aprob: ${aprobadasPercent} | Cancel: ${canceladasPercent} | Pend: ${pendientesPercent}`}
         </div>
       </CardFooter>

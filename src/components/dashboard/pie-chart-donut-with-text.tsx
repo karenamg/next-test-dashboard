@@ -128,7 +128,7 @@ export function PieChartDonutText({ title, description, chartData }: Props) {
         <div className="flex items-center gap-2 font-medium leading-none">
           Total de doctores registrados
         </div>
-        <div className="leading-5 text-muted-foreground">
+        <div className="leading-5 text-muted-foreground text-center">
           Incluye verificados y no verificados
         </div>
       </CardFooter>

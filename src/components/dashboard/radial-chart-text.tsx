@@ -101,7 +101,7 @@ export function RadialChartText({ title, description, total }: Props) {
         </ChartContainer>
       </CardContent>
       <CardFooter className="justify-center">
-        <p className="leading-5 text-muted-foreground text-sm">
+        <p className="leading-5 text-muted-foreground text-sm text-center">
           Pacientes atendidos hasta la fecha
         </p>
       </CardFooter>

@@ -197,7 +197,7 @@ export default async function Dashboard() {
   const { pacientesAtendidos, meses } = await getPacientesAtendidos();
   const citasAlMes = await getCitasAlMes();
   return (
-    <div className="flex flex-col max-w-screen-2xl mx-auto w-full pb-10 gap-y-6">
+    <div className="flex flex-col max-w-screen-2xl mx-auto w-full pb-10 gap-y-6 p-3">
       <h1 className="text-2xl font-bold">Dashboard</h1>
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 h-92 w-full">
         <RadialChartStacked
