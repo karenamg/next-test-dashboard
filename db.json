@@ -1,0 +1,460 @@
+{
+  "doctores": [
+    {
+      "id": "1",
+      "nombre": "Dr. Juan Perez",
+      "especialidad": "1",
+      "ubicacion": "16",
+      "estatus": "verificado"
+    },
+    {
+      "id": "2",
+      "nombre": "Dra. Maria Rodriguez",
+      "especialidad": "2",
+      "ubicacion": "14",
+      "estatus": "verificado"
+    },
+    {
+      "id": "3",
+      "nombre": "Dr. Carlos Gomez",
+      "especialidad": "3",
+      "ubicacion": "23",
+      "estatus": "denegado"
+    },
+    {
+      "id": "4",
+      "nombre": "Dra. Laura Martinez",
+      "especialidad": "4",
+      "ubicacion": "4",
+      "estatus": "pendiente"
+    },
+    {
+      "id": "5",
+      "nombre": "Dr. Alejandro Fernandez",
+      "especialidad": "1",
+      "ubicacion": "7",
+      "estatus": "verificado"
+    },
+    {
+      "id": "6",
+      "nombre": "Dra. Ana Gutierrez",
+      "especialidad": "6",
+      "ubicacion": "17",
+      "estatus": "denegado"
+    },
+    {
+      "id": "7",
+      "nombre": "Dr. Luis Ramirez",
+      "especialidad": "7",
+      "ubicacion": "2",
+      "estatus": "pendiente"
+    },
+    {
+      "id": "8",
+      "nombre": "Dra. Sofia Hernandez",
+      "especialidad": "8",
+      "ubicacion": "12",
+      "estatus": "verificado"
+    },
+    {
+      "id": "9",
+      "nombre": "Dr. Javier Lopez",
+      "especialidad": "3",
+      "ubicacion": "8",
+      "estatus": "denegado"
+    },
+    {
+      "id": "10",
+      "nombre": "Dra. Marta Gonzalez",
+      "especialidad": "1",
+      "ubicacion": "5",
+      "estatus": "pendiente"
+    },
+    {
+      "id": "11",
+      "nombre": "Dr. Ana Maria Perez",
+      "especialidad": "2",
+      "ubicacion": "21",
+      "estatus": "verificado"
+    },
+    {
+      "id": "12",
+      "nombre": "Dra. Carlos Ruiz",
+      "especialidad": "3",
+      "ubicacion": "6",
+      "estatus": "verificado"
+    },
+    {
+      "id": "13",
+      "nombre": "Dr. Laura Lopez",
+      "especialidad": "4",
+      "ubicacion": "18",
+      "estatus": "pendiente"
+    },
+    {
+      "id": "14",
+      "nombre": "Dra. Juan Martinez",
+      "especialidad": "1",
+      "ubicacion": "3",
+      "estatus": "verificado"
+    },
+    {
+      "id": "15",
+      "nombre": "Dr. Maria Sanchez",
+      "especialidad": "6",
+      "ubicacion": "22",
+      "estatus": "denegado"
+    },
+    {
+      "id": "16",
+      "nombre": "Dra. Carlos Garcia",
+      "especialidad": "7",
+      "ubicacion": "13",
+      "estatus": "verificado"
+    },
+    {
+      "id": "17",
+      "nombre": "Dr. Sofia Rodriguez",
+      "especialidad": "8",
+      "ubicacion": "1",
+      "estatus": "verificado"
+    },
+    {
+      "id": "18",
+      "nombre": "Dra. Luisa Hernandez",
+      "especialidad": "8",
+      "ubicacion": "20",
+      "estatus": "verificado"
+    },
+    {
+      "id": "19",
+      "nombre": "Dr. Gabriel Perez",
+      "especialidad": "1",
+      "ubicacion": "10",
+      "estatus": "pendiente"
+    },
+    {
+      "id": "20",
+      "nombre": "Dra. Pedro Gonzalez",
+      "especialidad": "5",
+      "ubicacion": "16",
+      "estatus": "verificado"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": 1,
+      "nombre": "Ana Garcia",
+      "fecha_nacimiento": "1990-05-15",
+      "sexo": "Femenino"
+    },
+    {
+      "id": 2,
+      "nombre": "Pedro Martinez",
+      "fecha_nacimiento": "1985-10-20",
+      "sexo": "Masculino"
+    },
+    {
+      "id": 3,
+      "nombre": "Sofia Lopez",
+      "fecha_nacimiento": "1978-03-12",
+      "sexo": "Femenino"
+    },
+    {
+      "id": 4,
+      "nombre": "Carlos Vargas",
+      "fecha_nacimiento": "1999-07-08",
+      "sexo": "Masculino"
+    },
+    {
+      "id": 5,
+      "nombre": "Luisa Ramirez",
+      "fecha_nacimiento": "1983-09-25",
+      "sexo": "Femenino"
+    },
+    {
+      "id": 6,
+      "nombre": "Juan Torres",
+      "fecha_nacimiento": "1975-12-30",
+      "sexo": "Masculino"
+    },
+    {
+      "id": 7,
+      "nombre": "María Sanchez",
+      "fecha_nacimiento": "1992-02-18",
+      "sexo": "Femenino"
+    },
+    {
+      "id": 8,
+      "nombre": "Miguel González",
+      "fecha_nacimiento": "1988-04-05",
+      "sexo": "Masculino"
+    },
+    {
+      "id": 9,
+      "nombre": "Laura Torres",
+      "fecha_nacimiento": "1991-06-22",
+      "sexo": "Femenino"
+    },
+    {
+      "id": 10,
+      "nombre": "Gabriel Pérez",
+      "fecha_nacimiento": "1980-08-10",
+      "sexo": "Masculino"
+    }
+  ],
+  "citas": [
+    {
+      "id": 1,
+      "fecha": "2024-10-10",
+      "hora": "10:00",
+      "doctor_id": "1",
+      "paciente_id": "1",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 2,
+      "fecha": "2024-10-12",
+      "hora": "15:30",
+      "doctor_id": "2",
+      "paciente_id": "2",
+      "estatus": "pendiente"
+    },
+    {
+      "id": 3,
+      "fecha": "2024-10-15",
+      "hora": "11:00",
+      "doctor_id": "3",
+      "paciente_id": "3",
+      "estatus": "cancelada"
+    },
+    {
+      "id": 4,
+      "fecha": "2024-10-17",
+      "hora": "09:30",
+      "doctor_id": "4",
+      "paciente_id": "4",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 5,
+      "fecha": "2024-10-20",
+      "hora": "14:00",
+      "doctor_id": "5",
+      "paciente_id": "5",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 6,
+      "fecha": "2024-10-22",
+      "hora": "08:45",
+      "doctor_id": "6",
+      "paciente_id": "6",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 7,
+      "fecha": "2024-9-25",
+      "hora": "12:30",
+      "doctor_id": "7",
+      "paciente_id": "7",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 8,
+      "fecha": "2024-8-28",
+      "hora": "16:15",
+      "doctor_id": "8",
+      "paciente_id": "8",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 9,
+      "fecha": "2024-9-30",
+      "hora": "10:45",
+      "doctor_id": "1",
+      "paciente_id": "9",
+      "estatus": "cancelada"
+    },
+    {
+      "id": 10,
+      "fecha": "2024-7-02",
+      "hora": "13:20",
+      "doctor_id": "2",
+      "paciente_id": "10",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 11,
+      "fecha": "2024-11-05",
+      "hora": "09:00",
+      "doctor_id": "3",
+      "paciente_id": "1",
+      "estatus": "pendiente"
+    },
+    {
+      "id": 12,
+      "fecha": "2024-11-08",
+      "hora": "14:30",
+      "doctor_id": "20",
+      "paciente_id": "2",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 13,
+      "fecha": "2024-11-10",
+      "hora": "11:45",
+      "doctor_id": "5",
+      "paciente_id": "3",
+      "estatus": "pendiente"
+    },
+    {
+      "id": 14,
+      "fecha": "2024-11-13",
+      "hora": "08:30",
+      "doctor_id": "6",
+      "paciente_id": "4",
+      "estatus": "aprobada"
+    },
+    {
+      "id": 15,
+      "fecha": "2024-11-15",
+      "hora": "17:00",
+      "doctor_id": "7",
+      "paciente_id": "5",
+      "estatus": "pendiente"
+    }
+  ],
+  "estados": [
+    {
+      "id": "1",
+      "nombre": "Amazonas"
+    },
+    {
+      "id": "2",
+      "nombre": "Anzoátegui"
+    },
+    {
+      "id": "3",
+      "nombre": "Apure"
+    },
+    {
+      "id": "4",
+      "nombre": "Aragua"
+    },
+    {
+      "id": "5",
+      "nombre": "Barinas"
+    },
+    {
+      "id": "6",
+      "nombre": "Bolívar"
+    },
+    {
+      "id": "7",
+      "nombre": "Carabobo"
+    },
+    {
+      "id": "8",
+      "nombre": "Cojedes"
+    },
+    {
+      "id": "9",
+      "nombre": "Delta Amacuro"
+    },
+    {
+      "id": "10",
+      "nombre": "Falcón"
+    },
+    {
+      "id": "11",
+      "nombre": "Guárico"
+    },
+    {
+      "id": "12",
+      "nombre": "Lara"
+    },
+    {
+      "id": "13",
+      "nombre": "Mérida"
+    },
+    {
+      "id": "14",
+      "nombre": "Miranda"
+    },
+    {
+      "id": "15",
+      "nombre": "Monagas"
+    },
+    {
+      "id": "16",
+      "nombre": "Nueva Esparta"
+    },
+    {
+      "id": "17",
+      "nombre": "Portuguesa"
+    },
+    {
+      "id": "18",
+      "nombre": "Sucre"
+    },
+    {
+      "id": "19",
+      "nombre": "Táchira"
+    },
+    {
+      "id": "20",
+      "nombre": "Trujillo"
+    },
+    {
+      "id": "21",
+      "nombre": "Vargas"
+    },
+    {
+      "id": "22",
+      "nombre": "Yaracuy"
+    },
+    {
+      "id": "23",
+      "nombre": "Zulia"
+    },
+    {
+      "id": "24",
+      "nombre": "Distrito Capital"
+    }
+  ],
+  "especialidades": [
+    {
+      "id": "1",
+      "nombre": "Cardiología"
+    },
+    {
+      "id": "2",
+      "nombre": "Pediatría"
+    },
+    {
+      "id": "3",
+      "nombre": "Dermatología"
+    },
+    {
+      "id": "4",
+      "nombre": "Ginecología"
+    },
+    {
+      "id": "5",
+      "nombre": "Oncología"
+    },
+    {
+      "id": "6",
+      "nombre": "Neurología"
+    },
+    {
+      "id": "7",
+      "nombre": "Traumatología"
+    },
+    {
+      "id": "8",
+      "nombre": "Psiquiatría"
+    }
+  ]
+}
