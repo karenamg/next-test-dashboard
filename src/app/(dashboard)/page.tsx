@@ -125,22 +125,38 @@ async function getCitas(): Promise<{
   };
 }
 
-async function getPacientesAtendidos(): Promise<number> {
+async function getPacientesAtendidos(): Promise<{
+  pacientesAtendidos: number;
+  meses: string;
+}> {
   const { citasData } = await getData();
 
   const currentDate = new Date();
   let count = 0;
+  let oldestDate = new Date(); // Inicializar con la fecha actual
+  let currentMonth =
+    currentDate.toLocaleString("default", { month: "long" }) +
+    " " +
+    currentDate.getFullYear();
 
   citasData.forEach((cita) => {
     if (cita.estatus === "aprobada") {
       const citaDate = new Date(cita.fecha);
       if (citaDate < currentDate) {
         count++;
+        if (citaDate < oldestDate) {
+          oldestDate = citaDate;
+        }
       }
     }
   });
 
-  return count;
+  const oldestMonth =
+    oldestDate.toLocaleString("default", { month: "long" }) +
+    " - " +
+    currentMonth;
+
+  return { pacientesAtendidos: count, meses: oldestMonth };
 }
 
 async function getCitasAlMes(): Promise<CitasAlMes[]> {
@@ -178,7 +194,7 @@ export default async function Dashboard() {
   const doctoresPorEspecialidad = await getDoctoresPorEspecialidad();
   const citasPorEspecialidad = await getCitasPorEspecialidad();
   const { aprobadas, canceladas, pendientes } = await getCitas();
-  const pacientesAtendidos = await getPacientesAtendidos();
+  const { pacientesAtendidos, meses } = await getPacientesAtendidos();
   const citasAlMes = await getCitasAlMes();
   return (
     <div className="flex flex-col max-w-screen-2xl mx-auto w-full pb-10 gap-y-6">
@@ -198,17 +214,13 @@ export default async function Dashboard() {
         />
         <RadialChartText
           title="Total de Pacientes atendidos"
-          description=""
+          description={meses}
           total={pacientesAtendidos}
         />
       </div>
 
       <div className="grid md:grid-cols-2 gap-10 h-92 w-full">
-        <LineChartLabel
-          title="Total de Citas por Mes"
-          description=""
-          chartData={citasAlMes}
-        />
+        <LineChartLabel title="Total de Citas por Mes" chartData={citasAlMes} />
         <BarChartMixed
           title="Total de Citas por Especialidad"
           description=""

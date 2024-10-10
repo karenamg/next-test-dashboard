@@ -1,6 +1,5 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { CartesianGrid, LabelList, Line, LineChart, XAxis } from "recharts";
 
 import {
@@ -23,18 +22,8 @@ export const description = "A line chart with a label";
 
 type Props = {
   title: string;
-  description: string;
   chartData: CitasAlMes[];
 };
-
-const chartData = [
-  { mes: "January", aprobadas: 186, canceladas: 12 },
-  { mes: "February", aprobadas: 305, canceladas: 12 },
-  { mes: "March", aprobadas: 237, canceladas: 12 },
-  { mes: "April", aprobadas: 73, canceladas: 12 },
-  { mes: "May", aprobadas: 209, canceladas: 12 },
-  { mes: "June", aprobadas: 214, canceladas: 12 },
-];
 
 const chartConfig = {
   aprobadas: {
@@ -47,7 +36,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function LineChartLabel({ title, description, chartData }: Props) {
+export function LineChartLabel({ title, chartData }: Props) {
   return (
     <Card>
       <CardHeader>
@@ -102,11 +91,8 @@ export function LineChartLabel({ title, description, chartData }: Props) {
           </LineChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
+      <CardFooter>
+        <div className="leading-none text-muted-foreground text-sm">
           Total de citas aprobadas en los últimos 6 meses
         </div>
       </CardFooter>

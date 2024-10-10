@@ -1,5 +1,4 @@
 "use client";
-import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, XAxis, YAxis } from "recharts";
 import {
   Card,
@@ -15,7 +14,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-export const description = "A mixed bar chart";
+
 import { CitasPorEspecialidad } from "@/types";
 
 type Props = {
@@ -23,41 +22,6 @@ type Props = {
   description: string;
   chartData: CitasPorEspecialidad[];
 };
-
-// const chartData = [
-//   {
-//     especialidad: "cardiologia",
-//     citas: 275,
-//     fill: "var(--color-cardiologia)",
-//   },
-//   { especialidad: "pediatria", citas: 200, fill: "var(--color-pediatria)" },
-//   {
-//     especialidad: "dermatologia",
-//     citas: 287,
-//     fill: "var(--color-dermatologia)",
-//   },
-//   {
-//     especialidad: "ginecologia",
-//     citas: 173,
-//     fill: "var(--color-ginecologia)",
-//   },
-//   { especialidad: "oncologia", citas: 190, fill: "var(--color-oncologia)" },
-//   {
-//     especialidad: "neurologia",
-//     citas: 10,
-//     fill: "var(--color-neurologia)",
-//   },
-//   {
-//     especialidad: "traumatologia",
-//     citas: 90,
-//     fill: "var(--color-traumatologia)",
-//   },
-//   {
-//     especialidad: "psiquiatria",
-//     citas: 99,
-//     fill: "var(--color-psiquiatria)",
-//   },
-// ];
 
 const chartConfig = {
   doctores: {
@@ -102,7 +66,7 @@ export function BarChartMixed({ title, description, chartData }: Props) {
     <Card>
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -133,12 +97,9 @@ export function BarChartMixed({ title, description, chartData }: Props) {
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+      <CardFooter>
+        <div className="leading-none text-muted-foreground text-sm">
+          Total de citas registradas por especialidad
         </div>
       </CardFooter>
     </Card>
