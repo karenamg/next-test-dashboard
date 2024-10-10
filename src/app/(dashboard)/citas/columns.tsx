@@ -3,6 +3,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Cita, Doctor, EstatusCita, Paciente } from "@/types";
 import { ColumnDef } from "@tanstack/react-table";
+import { isWithinInterval } from "date-fns";
+import { DateRange } from "react-day-picker";
 
 export const columns: ColumnDef<Cita>[] = [
   {
@@ -24,6 +26,19 @@ export const columns: ColumnDef<Cita>[] = [
   {
     accessorKey: "fecha",
     header: "Fecha",
+    filterFn: (row, columnId, filterValue) => {
+      const dateRange = filterValue as DateRange;
+      const fechaCita = new Date(row.getValue(columnId));
+
+      if (dateRange == null || dateRange.from == null || dateRange.to == null) {
+        return false;
+      }
+
+      return isWithinInterval(fechaCita, {
+        start: dateRange.from,
+        end: dateRange.to,
+      });
+    },
   },
   {
     accessorKey: "hora",

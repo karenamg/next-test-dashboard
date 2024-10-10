@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import * as XLSX from "xlsx";
+import React, { useState } from "react";
+import { DateRange as DateRangePicker } from "react-day-picker";
 
 import {
   ColumnDef,
@@ -9,6 +9,7 @@ import {
   useReactTable,
   ColumnFiltersState,
   getFilteredRowModel,
+  getPaginationRowModel,
 } from "@tanstack/react-table";
 
 import {
@@ -20,10 +21,11 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-import { Input } from "@/components/ui/input";
 import { File } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { exportDataToCSV } from "@/lib/utils";
+import DateRange from "@/components/date-range";
+import { endOfYear } from "date-fns";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -42,22 +44,36 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+
+    initialState: {
+      pagination: {
+        pageSize: 15,
+      },
+    },
     state: {
       columnFilters,
     },
   });
 
+  const defaultTo = endOfYear(new Date());
+  const defaultFrom = new Date();
+
+  const [date, setDate] = React.useState<DateRangePicker | undefined>({
+    from: defaultFrom,
+    to: defaultTo,
+  });
+
+  React.useEffect(() => {
+    if (date != null) {
+      table.getColumn("fecha")?.setFilterValue(date);
+    }
+  }, [date]);
+
   return (
     <div>
       <div className="flex items-center justify-between py-4">
-        <Input
-          placeholder="Buscar nombre"
-          value={(table.getColumn("nombre")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("nombre")?.setFilterValue(event.target.value)
-          }
-          className="max-w-sm"
-        />
+        <DateRange date={date} onDateChange={setDate} />
         <Button
           size="sm"
           className="h-8 gap-1"
@@ -120,6 +136,28 @@ export function DataTable<TData, TValue>({
             )}
           </TableBody>
         </Table>
+      </div>
+      <div className="flex items-center justify-end space-x-2 py-4">
+        <div className="flex-1 text-sm text-muted-foreground">
+          {table.getState().pagination.pageIndex + 1} de {table.getPageCount()}{" "}
+          paginas
+        </div>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => table.previousPage()}
+          disabled={!table.getCanPreviousPage()}
+        >
+          Anterior
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={() => table.nextPage()}
+          disabled={!table.getCanNextPage()}
+        >
+          Siguiente
+        </Button>
       </div>
     </div>
   );
