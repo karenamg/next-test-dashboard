@@ -23,7 +23,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { File } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { exportDataToExcel } from "@/lib/utils";
+import { exportDataToCSV } from "@/lib/utils";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -62,7 +62,7 @@ export function DataTable<TData, TValue>({
           size="sm"
           className="h-8 gap-1"
           onClick={async () => {
-            await exportDataToExcel("24siete_citas", "citas", data);
+            await exportDataToCSV("24siete_citas", "citas", data);
           }}
         >
           <File className="h-3.5 w-3.5" />

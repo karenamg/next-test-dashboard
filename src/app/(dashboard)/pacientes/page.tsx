@@ -1,17 +1,5 @@
 import React from "react";
-import { Button } from "@/components/ui/button";
 import axios from "axios";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuCheckboxItem,
-  DropdownMenuContent,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { File, ListFilter } from "lucide-react";
-import { Tabs } from "@/components/ui/tabs";
 import { Paciente, PacienteResponse } from "@/types";
 import { DataTable } from "./data-table";
 import { columns } from "./columns";

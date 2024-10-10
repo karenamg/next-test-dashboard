@@ -16,13 +16,13 @@ export function normalizeText(specialty: string): string {
   return lowercase;
 }
 
-export async function exportDataToExcel(
-  title: string,
+export async function exportDataToCSV(
+  filename: string,
   worksheetname: string,
   data: any[]
 ) {
   try {
-    let dataToExport = [];
+    let dataToExport: any[] = [];
 
     if (worksheetname === "pacientes") {
       dataToExport = data.map((pro: any) => ({
@@ -47,10 +47,25 @@ export async function exportDataToExcel(
     } else {
       return;
     }
-    const workbook = XLSX.utils.book_new();
-    const worksheet = XLSX.utils?.json_to_sheet(dataToExport);
-    XLSX.utils.book_append_sheet(workbook, worksheet, worksheetname);
-    XLSX.writeFile(workbook, `${title}.xlsx`);
+
+    // Convert data to CSV format
+    const header = Object.keys(dataToExport[0]).join(",");
+    const csvRows = dataToExport
+      .map((row) => Object.values(row).join(","))
+      .join("\n");
+    const csvString = `${header}\n${csvRows}`;
+
+    // Create a Blob from the CSV string
+    const csvData = new Blob([csvString], { type: "text/csv" });
+    const csvURL = URL.createObjectURL(csvData);
+
+    // Create a link and trigger the download
+    const link = document.createElement("a");
+    link.href = csvURL;
+    link.download = `${filename}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   } catch (error: any) {
     console.log("No se pudo exportar el archivo...", error.message);
   }
