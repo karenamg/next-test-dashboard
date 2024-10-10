@@ -118,6 +118,7 @@ async function getCitas(): Promise<{
     }
   });
 
+  console.log(citasCanceladas);
   return {
     aprobadas: citasAprobadas,
     canceladas: citasCanceladas,
